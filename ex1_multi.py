@@ -15,8 +15,8 @@ def main():
 
     normalizeFeatures = featureNormalize(features)
 
-    theta = pd.Series(np.ones(3))
-    al = 0.1
+    theta = np.ones(3)
+    al = np.array([i*0.01 for i in range(1, 11)])
     epsilon = 10**(-6)
 
 
