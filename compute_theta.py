@@ -24,7 +24,7 @@ def gradient_descent_theta(features: pd.DataFrame, y: pd.Series, alpha: float = 
     return pd.Series([t0, t1, t2]).astype(float)
 
 
-def main():
+def compute_theta():
     data = pd.read_csv("data/ex1data2.txt", delimiter=",", names=["size", "rooms", "price"])
     features = data[["size", "rooms"]]
     y = data["price"]
@@ -36,5 +36,3 @@ def main():
     print("Theta после градиентного спуска:", theta_gd.tolist())
 
 
-if __name__ == "__main__":
-    main()

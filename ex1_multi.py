@@ -3,10 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-from methods.featureNormalize import featureNormalize
 from methods.gradientDestentMulti import gradientDescentMulti
 from methods.computeCostMulti import computeCostMulti
 from methods.featureNormalize import featureNormalize
+from compute_theta import compute_theta
+
 
 
 def main():
@@ -45,6 +46,7 @@ def main():
     print(f"Сходимость функции достигнута со значением alpha = {alphaTime[0]} за минимальное время {alphaTime[1][1]}")
     print(f"Полученные параметры:\ntheta_0 = {theta[0]}\ntheta_1 = {theta[1]}\ntheta_2 = {theta[2]}")
 
+    compute_theta()
 
 if __name__ == '__main__':
     main()
